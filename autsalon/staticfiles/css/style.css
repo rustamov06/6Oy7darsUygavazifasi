@@ -1,0 +1,153 @@
+/* Umumiy stillar */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #ff7b00, #ff2e63);
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8d210 !important;
+    text-shadow: 0 0 10px rgba(248, 210, 16, 0.7);
+}
+
+/* Karta dizayni */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: linear-gradient(to right, #333, #444);
+    color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.card-body {
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ff7b00;
+    text-transform: uppercase;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #ff2e63, #ff7b00);
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+footer a {
+    color: #f8d210;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ffea00;
+    text-decoration: underline;
+}
+
+/* Kartochkalar uchun stil */
+.card {
+    background: #333; /* Kartochka orqa foni */
+    border-radius: 15px; /* Kartochka burchaklarini yumshatish */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Yengil soya effekti */
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Kartochka hover effekti */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Rasm stilini to‘g‘rilash */
+.card img {
+    width: 100%; /* Kartochka eniga to‘liq joylashadi */
+    height: 180px; /* Bir xil balandlikda bo‘ladi */
+    object-fit: cover; /* Rasmning muhim qismini saqlab qoladi */
+    border-radius: 10px; /* Burchaklarni yumshatish */
+}
+
+/* Sarlavha va matn */
+.card-title {
+    color: #ff8800; /* Yorqin sarlavha */
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-text {
+    color: #fff;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Batafsil tugmasi */
+.btn-primary {
+    background: #007bff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+
+
+p {
+    margin: 5px 0; /* Har bir element orasida 5px bo‘shliq */
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+
+
