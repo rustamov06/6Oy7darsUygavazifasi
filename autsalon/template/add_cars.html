@@ -54,23 +54,7 @@
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="mb-3">
-                    <label class="form-label" for="id_car_name">Moshina nomi:</label>
-                    <input type="text" id="id_car_name" class="form-control" name="car_name">
-                    <label class="form-label" for="photo">Photo:</label>
-                    <input type="file" id="photo" class="form-control" name="car_photo">
-                    <label class="form-label" for="Model yili">Moshina yili:</label>
-                    <input type="date" id="Model yili" class="form-control" name="car_model_year">
-                    <label class="form-label" for="Narxi">Moshina narxi:</label>
-                    <input type="number" id="Narxi" class="form-control" name="car_price">
-                    <label class="form-label" for="id_car_brand">Moshina brendi:</label>
-                    <select id="id_car_brand" class="form-control" name="car_brand">
-                        <option value="">---------</option>
-                        {% for brand in brands %}
-                            <option value="{{ brand.id }}">{{ brand.name }}</option>
-                        {% endfor %}
-                    </select>
-
-
+                    {{ form.as_p }}
                 </div>
                 <button type="submit" class="btn btn-primary w-200" style="border-radius: 20px; font-size: 20px; font-weight: bold;">Saqlash</button>
             </form>

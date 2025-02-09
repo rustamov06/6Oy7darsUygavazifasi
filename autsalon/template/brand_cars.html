@@ -51,6 +51,9 @@
                                     <p><b>{{ car.name }}</b></p>
                                     <p>Yili: {{ car.model_year }}</p>
                                     <p>Narxi: ${{ car.price }}</p>
+                                    <a href="{% url 'update_car' car.id %}" class="btn btn-warning">Tahrirlash</a>
+
+
                                 </a>
 
                             </li>

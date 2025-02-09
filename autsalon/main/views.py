@@ -65,3 +65,40 @@ def add_brands(request):
         'brands': brands
     }
     return render(request, 'add_brands.html', context)
+
+
+def update_car(request, car_id):
+    car = get_object_or_404(Car, id=car_id)
+
+    if request.method == "POST":
+        if "update" in request.POST:  # Yangilash tugmasi bosilsa
+            form = CarForm(request.POST, request.FILES, instance=car)
+            if form.is_valid():
+                form.save()
+                return redirect('cars')  # Mashinalar ro‘yxatiga qaytish
+        elif "delete" in request.POST:  # O‘chirish tugmasi bosilsa
+            car.delete()
+            return redirect('cars')
+
+    else:
+        form = CarForm(instance=car)
+
+    return render(request, 'update_car.html', {'form': form, 'car': car})
+
+
+def update_brand(request, brand_id):
+    brand = get_object_or_404(Brand, id=brand_id)
+
+    if request.method == "POST":
+        if "update" in request.POST:
+            form = BrandForm(request.POST, instance=brand)
+            if form.is_valid():
+                form.save()
+                return redirect('brands')
+        elif "delete" in request.POST:
+            brand.delete()
+            return redirect('brands')
+    else:
+        form = BrandForm(instance=brand)
+
+    return render(request, 'update_brand.html', {'form': form, 'brand': brand})

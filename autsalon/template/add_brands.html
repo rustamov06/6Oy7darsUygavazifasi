@@ -54,14 +54,8 @@
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="mb-4">
-                <label class="form-label" for="id_brend_nomi">Brend nomi:</label>
-                <input type="text" id="id_brend_nomi" class="form-control" name="brend_nomi">
+                {{ form.as_p }}
 
-                <label class="form-label mt-3" for="id_kelib_chiqishi">Kelib chiqishi:</label>
-                <input type="text" id="id_kelib_chiqishi" class="form-control" name="kelib_chiqishi">
-
-                <label class="form-label mt-3" for="id_tashkil_vaqti">Tashkil topgan vaqti:</label>
-                <input type="datetime-local" id="id_tashkil_vaqti" class="form-control" name="tashkil_vaqti">
             </div>
 
             <button type="submit" class="btn btn-success w-200" style="border-radius: 10px; font-size: 18px; font-weight: bold;">Saqlash</button>

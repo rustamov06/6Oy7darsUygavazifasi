@@ -150,4 +150,10 @@ p {
 }
 
 
-
+    <style>.btn {
+    width: 120px; /* Tugmalarni bir xil kenglikda qilish */
+    height: 40px; /* Tugmalarni bir xil balandlikda qilish */
+    text-align: center; /* Matnni markazda joylashtirish */
+    font-weight: bold; /* Matnni qalinroq qilish */
+}
+</style>

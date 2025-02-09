@@ -47,6 +47,8 @@
                 {% endif %}
                 <p><strong>Model yili:</strong> {{ car.model_year }}</p>
                 <p><strong>Narxi:</strong> ${{ car.price }}</p>
+                <a href="{% url 'update_car' car.id %}" class="btn btn-warning">Tahrirlash</a>
+
 
             </div>
         </main>

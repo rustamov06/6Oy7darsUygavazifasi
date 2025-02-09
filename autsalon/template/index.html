@@ -32,6 +32,7 @@
                             <a class="nav-link" href="{% url 'cars' %}">Mashinalar</a>
                             <a class="nav-link" href="{% url 'add_cars' %}">ADD cars</a>
                             <a class="nav-link" href="{% url 'add_brand' %}">ADD brands</a>
+
                         </div>
                     </div>
                 </div>
@@ -56,7 +57,13 @@
                                     {% endif %}
                                     <b>Model yili:</b> {{ car.model_year }} <br>
                                     <b>Narxi:</b> ${{ car.price }} <br>
-                                    <b>Brend:</b> {{ car.brand.name }}
+                                    <b>Brend:</b> {{ car.brand.name }} <br>
+                                    <a href="{% url 'update_car' car.id %}" class="btn btn-warning">Tahrirlash</a>
+                                    <button type="submit" name="delete" class="btn btn-danger w-300 mt-2"
+                            onclick="return confirm('Haqiqatan ham ushbu brendni o‘chirmoqchimisiz?');">
+                            O‘chirish
+                            </button>
+
                                 </p>
                             </div>
                             </a>

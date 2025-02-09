@@ -20,6 +20,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@8.2.0/css/mdb.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
+
+<style>
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Tugmalarni yonma-yon joylashtirish */
+    gap: 10px; /* Tugmalar orasidagi masofa */
+}
+
+.button-container button {
+    white-space: nowrap; /* Matnning pastga tushishini oldini oladi */
+    display: flex;
+    align-items: center; /* Matnni vertikal markazga joylashtiradi */
+    justify-content: center; /* Matnni gorizontal markazga joylashtiradi */
+    padding: 8px 15px; /* Tugma ichidagi matnni to‘g‘ri joylashtirish */
+    font-weight: bold; /* Matnni aniqroq qilish uchun */
+}
+
+
+</style>
     <title>Mashinalar</title>
 </head>
 <body>
@@ -69,6 +88,13 @@
                               {% endif %}<br>
 
                               <a href="{% url 'car_detail' car_id=car.id %}" class="btn btn-primary">Batafsil</a>
+                              <a href="{% url 'update_car' car.id %}" class="btn btn-warning">Tahrirlash</a>
+                              <button type="submit" name="delete" class="btn btn-danger w-300 mt-2"
+                            onclick="return confirm('Haqiqatan ham ushbu brendni o‘chirmoqchimisiz?');">
+                            O‘chirish
+                            </button>
+
+
                           </div>
                       </div>
                   </div>
